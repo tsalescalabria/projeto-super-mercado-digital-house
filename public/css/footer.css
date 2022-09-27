@@ -1,0 +1,73 @@
+.rodape{
+width: 100%;
+background:#111;
+margin-top:100px;
+}
+
+.rodape-conteudo{
+	display:flex;
+	justify-content: space-evenly;
+	padding:100px;
+	padding-left: 100px;
+}
+
+.links{
+	width: 100%;
+	transition: all 0.2 s;
+}
+
+.links :hover{
+	color:orangered;
+	text-decoration: none;
+
+}
+
+.titulo-link{
+	color:white;
+
+}
+
+.link-rodape{
+	color:white;
+	font-size:20px;
+}
+
+.cartoes{
+	width: 100%;
+	/* margin-left: 100px; */
+}
+
+.titulo-pagamento{
+	color:white;
+	width: 100%;
+	font-size: 25px;
+}
+
+.cartao-pagamento{
+	width:50px;
+	height:50px;
+
+}
+
+
+@media (max-width:375px){
+	.rodape{
+		width: 100%;
+	}
+	.rodape-conteudo{
+		display:block;
+	}
+}
+
+@media (max-width:675px){
+	.rodape{
+		width: 100%;
+	}
+	.rodape-conteudo{
+		display:block;
+	}
+}
+
+
+
+

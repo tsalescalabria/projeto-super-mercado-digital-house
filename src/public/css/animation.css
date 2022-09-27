@@ -1,0 +1,64 @@
+.carrossel .fotos{ 
+    width:500%;
+    overflow: hidden;
+    animation-name: animação;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+
+.carrossel{
+    overflow: hidden;
+	width: 100%;
+    bottom:3px;
+
+}
+
+
+.carrossel .fotos img {
+  width:19.9%;
+  /* margin-top:80px; */
+}
+
+@media (max-width:768px){
+	.carrossel{
+		width:768px;
+	}
+	
+}
+
+
+
+
+
+
+@keyframes animação{
+    0% { 
+        margin-left: 0;
+    }
+    20%{ 
+        margin-left: 0;
+    }
+    25%{ 
+        margin-left: -100%;
+    }
+    45%{ 
+        margin-left:-100%;
+    }
+    50%{ 
+        margin-left: -200%;
+    }
+    70%{ 
+        margin-left: -200%;
+    }
+    75%{ 
+        margin-left:-300%;
+    }
+    95%{
+        margin-left: -300%;
+    }
+
+    100%{ 
+        margin-left: -400%;
+    }
+}

@@ -1,0 +1,55 @@
+.centro{
+    align-items: center;
+    text-align: center;
+    font-size: large;
+}
+
+.material-icons{
+    font-size: 30px
+}
+
+.click{
+    font-size: medium;
+    border-radius: 10px;
+}
+
+.btn-1{
+    background-color: #F24726;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    
+}
+
+.btn-1:hover{
+    background-color: #f58634;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.btn-2{
+    background-color: #1A1A1A;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    
+}
+
+.btn-2:hover{
+    background-color: #f58634;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}

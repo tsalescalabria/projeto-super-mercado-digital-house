@@ -1,0 +1,115 @@
+* {
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+	float: left;
+	width: 25%;
+	padding: 10px 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  /* Style the counter cards */
+  .card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+	padding: 16px;
+	text-align: center;
+	background-color: #f1f1f1;
+	height: 350px;
+	border-radius: 20px;
+  }
+
+
+
+
+.adicionar-produto{
+    height: 30px;
+    border:none;
+    width:100%;
+    font-size:20px;
+    border-radius: 20px;
+    background-color:#F24726;
+    cursor: pointer;
+	color:white;
+}
+
+.adicionar-produto:hover{
+    background:#f58634;
+    color: white;
+}
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+	.column {
+	  width: 100%;
+	  display: block;
+	  margin-bottom: 20px;
+	}
+  }
+
+  .container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+  }
+  @media (min-width: 768px) {
+	.container {
+	  width: 750px;
+	}
+  }
+  @media (min-width: 992px) {
+	.container {
+	  width: 970px;
+	}
+  }
+  @media (min-width: 1200px) {
+	.container {
+	  width: 1170px;
+	}
+  }
+
+  .img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+  }
+
+  
+.prod-titulo{ 
+	color:gray;
+	font-weight: 500;
+	font-family:'Montserrat';
+
+}
+
+.prod-preco{
+	font-size:25px;
+	color:orangered;
+	font-family:'Montserrat';
+}
+
+.melhores-ofertas {
+	background-color: orangered;
+	margin-top: 50px;
+	margin-bottom: 40px;
+	padding: 40px 50px;
+	border-radius: 20px;
+}
+
+.text-center {
+	text-align: center;
+}

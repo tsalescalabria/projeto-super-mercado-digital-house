@@ -1,0 +1,215 @@
+{
+    "tables": {
+        "categorias": {
+            "tableName": "categorias",
+            "schema": {
+                "id_categoria": {
+                    "allowNull": false,
+                    "autoIncrement": true,
+                    "primaryKey": true,
+                    "field": "id_categoria",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "nome": {
+                    "allowNull": false,
+                    "field": "nome",
+                    "seqType": "Sequelize.STRING(100)"
+                }
+            },
+            "indexes": []
+        },
+        "Clientes": {
+            "tableName": "Clientes",
+            "schema": {
+                "id": {
+                    "primaryKey": true,
+                    "allowNull": false,
+                    "autoIncrement": true,
+                    "field": "id",
+                    "seqType": "Sequelize.BIGINT(10).UNSIGNED"
+                },
+                "nome": {
+                    "allowNull": false,
+                    "field": "nome",
+                    "seqType": "Sequelize.STRING(100)"
+                },
+                "email": {
+                    "allowNull": false,
+                    "field": "email",
+                    "seqType": "Sequelize.STRING(15)"
+                },
+                "senha": {
+                    "allowNull": false,
+                    "field": "senha",
+                    "seqType": "Sequelize.STRING(15)"
+                },
+                "ativo": {
+                    "allowNull": false,
+                    "field": "ativo",
+                    "seqType": "Sequelize.BOOLEAN"
+                },
+                "created_at": {
+                    "allowNull": false,
+                    "field": "created_at",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updated_at": {
+                    "allowNull": false,
+                    "field": "updated_at",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        },
+        "compras": {
+            "tableName": "compras",
+            "schema": {
+                "id": {
+                    "allowNull": false,
+                    "autoIncrement": true,
+                    "primaryKey": true,
+                    "field": "id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "data": {
+                    "allowNull": false,
+                    "field": "data",
+                    "seqType": "Sequelize.DATE"
+                },
+                "cliente_id": {
+                    "field": "cliente_id",
+                    "allowNull": true,
+                    "references": {
+                        "model": "Clientes",
+                        "key": "id"
+                    },
+                    "onDelete": "NO ACTION",
+                    "onUpdate": "CASCADE",
+                    "seqType": "Sequelize.INTEGER(11)"
+                },
+                "compra_id": {
+                    "allowNull": true,
+                    "references": {
+                        "model": "Clientes",
+                        "key": "id"
+                    },
+                    "onDelete": "SET NULL",
+                    "onUpdate": "CASCADE",
+                    "field": "compra_id",
+                    "seqType": "Sequelize.BIGINT(10).UNSIGNED"
+                }
+            },
+            "indexes": []
+        },
+        "produtos": {
+            "tableName": "produtos",
+            "schema": {
+                "id_produto": {
+                    "allowNull": false,
+                    "autoIncrement": true,
+                    "primaryKey": true,
+                    "field": "id_produto",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "slug": {
+                    "field": "slug",
+                    "seqType": "Sequelize.STRING"
+                },
+                "nome": {
+                    "allowNull": false,
+                    "field": "nome",
+                    "seqType": "Sequelize.STRING(100)"
+                },
+                "preco": {
+                    "allowNull": false,
+                    "field": "preco",
+                    "seqType": "Sequelize.DECIMAL"
+                },
+                "descricao": {
+                    "field": "descricao",
+                    "seqType": "Sequelize.STRING"
+                },
+                "quantidade": {
+                    "field": "quantidade",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "imagem": {
+                    "field": "imagem",
+                    "seqType": "Sequelize.STRING"
+                },
+                "fk_categoria": {
+                    "field": "fk_categoria",
+                    "allowNull": true,
+                    "references": {
+                        "model": "categorias",
+                        "key": "id_categoria"
+                    },
+                    "onDelete": "NO ACTION",
+                    "onUpdate": "CASCADE",
+                    "seqType": "Sequelize.BIGINT(10).UNSIGNED"
+                },
+                "promocao": {
+                    "field": "promocao",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "preco_promocao": {
+                    "field": "preco_promocao",
+                    "seqType": "Sequelize.DECIMAL"
+                }
+            },
+            "indexes": []
+        },
+        "produto_compra": {
+            "tableName": "produto_compra",
+            "schema": {
+                "id": {
+                    "allowNull": false,
+                    "primaryKey": true,
+                    "autoIncrement": true,
+                    "field": "id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "compra_id": {
+                    "field": "compra_id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "produto_id": {
+                    "field": "produto_id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "quantidade": {
+                    "field": "quantidade",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "preco": {
+                    "field": "preco",
+                    "seqType": "Sequelize.FLOAT"
+                },
+                "CompraId": {
+                    "allowNull": true,
+                    "references": {
+                        "model": "compras",
+                        "key": "id"
+                    },
+                    "onDelete": "SET NULL",
+                    "onUpdate": "CASCADE",
+                    "field": "CompraId",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "ProdutoIdProduto": {
+                    "allowNull": true,
+                    "references": {
+                        "model": "produtos",
+                        "key": "id_produto"
+                    },
+                    "onDelete": "SET NULL",
+                    "onUpdate": "CASCADE",
+                    "field": "ProdutoIdProduto",
+                    "seqType": "Sequelize.INTEGER"
+                }
+            },
+            "indexes": []
+        }
+    },
+    "revision": 14
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Novo Usuário</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/estilo.css">
+	<link rel="stylesheet" href="/css/footer.css">
+
+	<link rel="stylesheet" href="/css/header.css">
+	<link rel="stylesheet" href="/css/cadastrar.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+	<!-- header -->
+	<%- include('../partials/header'); %>
+
+	<h1 class="titulo">Cadastrar Novo Usuário</h1>
+	<div class="container">
+		<form action="/users/cadastrar" method="Post">
+			<div class="field">
+				<label class="l1" for="nome"><strong>Nome</strong></label>
+				<input class="campo" type="text" id="nome" name="nome" required>
+			</div>
+			<div class="field">
+				<label class="l1" for="email"><strong>E-mail</strong></label>
+				<input class="campo" type="email" id="email" name="email" required>
+			</div>
+			<div class="field">
+				<label class="l1" for="senha"><strong>Senha</strong></label>
+				<input class="campo" type="password" id="senha" name="senha" required>
+			</div>
+
+			<hr>
+			<h3 class="my-4">Informações</h3>
+			<div class="field">
+				<label class="l1" for="estado"><strong>Estado</strong></label>
+				<input class="campo" type="estado" id="estado" name="estado" required>
+			</div>
+			<div class="field">
+				<label class="l1" for="cidade"><strong>Cidade</strong></label>
+				<input class="campo" type="cidade" id="cidade" name="cidade" required>
+			</div>
+			<div class="field">
+				<label class="l1" for="endereco"><strong>Endereço</strong></label>
+				<input class="campo" type="endereco" id="endereco" name="endereco" required>
+			</div>
+			<div class="field">
+				<label class="l1" for="telefone"><strong>Telefone</strong></label>
+				<input class="campo" type="telefone" id="telefone" name="telefone" required>
+			</div>
+
+			<button class="bt-cadastro" type="submit">cadastrar</button>
+		</form>
+	</div>
+
+	<!-- footer -->
+	<%- include('../partials/footer'); %>
